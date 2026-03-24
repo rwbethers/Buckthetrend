@@ -1,6 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<!-- Google Ads Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17722254862"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17722254862');
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Buckhorn Advisory | Utah's Fractional CFO</title>
@@ -541,9 +549,28 @@ function quizAnswer(q, points) {
 
 function quizSubmit(e) {
   e.preventDefault();
+  var name  = document.getElementById('ql-name').value;
+  var biz   = document.getElementById('ql-business').value;
+  var phone = document.getElementById('ql-phone').value;
+
+  // 1. Send to Google Sheets
+  var SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyTzIdbzq2G76C3B_jSLDE-VgncJQJsFbKy04f5oakf7YaoMU0AzPDB5lvnNVFKhhzZ/exec";
+  fetch(SHEET_WEBHOOK, {
+    method: "POST", mode: "no-cors",
+    headers: {"Content-Type":"application/json"},
+    body: JSON.stringify({
+      timestamp: new Date().toLocaleString("en-US", {timeZone:"America/Denver"}),
+      name: name, business: biz, phone: phone, score: quizScore,
+      source: "Landing Page Quiz"
+    })
+  }).catch(function(){});
+
+  // 2. Fire Google Ads conversion
+  gtag('event', 'conversion', {'send_to': 'AW-17722254862'});
+
+  // 3. Show thank you + open Calendly
   document.getElementById('quiz-lead-form').style.display = 'none';
   document.getElementById('quiz-thankyou').style.display = 'block';
-  var name = document.getElementById('ql-name').value;
   setTimeout(function() {
     window.open('https://calendly.com/bethersagency/30min?name=' + encodeURIComponent(name), '_blank');
   }, 1500);
