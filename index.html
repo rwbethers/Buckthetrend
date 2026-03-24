@@ -504,8 +504,9 @@
         </form>
         <div id="quiz-thankyou" style="display:none; text-align:center; padding:20px 0;">
           <div style="font-size:40px; margin-bottom:12px;">✅</div>
-          <p style="color:white; font-size:17px; font-weight:700; margin-bottom:8px;">You're on Ryan's calendar.</p>
-          <p style="color:rgba(255,255,255,0.6); font-size:14px;">Expect a call within 1 business day. Check your phone.</p>
+          <p style="color:white; font-size:17px; font-weight:700; margin-bottom:8px;">Got it — Ryan will be in touch.</p>
+          <p style="color:rgba(255,255,255,0.6); font-size:14px; margin-bottom:16px;">Expect a call within 1 business day. Or book a time now if you prefer:</p>
+          <a href="https://calendly.com/bethersagency/30min" target="_blank" style="display:inline-block; background:var(--gold); color:#0a1628; font-weight:800; font-size:14px; padding:12px 20px; border-radius:8px; text-decoration:none; letter-spacing:0.5px;">📅 Book a Time Now (Optional)</a>
         </div>
       </div>
 
@@ -553,27 +554,21 @@ function quizSubmit(e) {
   var biz   = document.getElementById('ql-business').value;
   var phone = document.getElementById('ql-phone').value;
 
-  // 1. Send to Google Sheets
+  // 1. Send to Google Sheets (GET + URL params — works with no-cors)
   var SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyTzIdbzq2G76C3B_jSLDE-VgncJQJsFbKy04f5oakf7YaoMU0AzPDB5lvnNVFKhhzZ/exec";
-  fetch(SHEET_WEBHOOK, {
-    method: "POST", mode: "no-cors",
-    headers: {"Content-Type":"application/json"},
-    body: JSON.stringify({
-      timestamp: new Date().toLocaleString("en-US", {timeZone:"America/Denver"}),
-      name: name, business: biz, phone: phone, score: quizScore,
-      source: "Landing Page Quiz"
-    })
-  }).catch(function(){});
+  var params = new URLSearchParams({
+    timestamp: new Date().toLocaleString("en-US", {timeZone:"America/Denver"}),
+    name: name, business: biz, phone: phone, score: quizScore,
+    source: "Landing Page Quiz"
+  });
+  fetch(SHEET_WEBHOOK + "?" + params.toString(), { method: "GET", mode: "no-cors" }).catch(function(){});
 
   // 2. Fire Google Ads conversion
   gtag('event', 'conversion', {'send_to': 'AW-17722254862'});
 
-  // 3. Show thank you + open Calendly
+  // 3. Show thank you
   document.getElementById('quiz-lead-form').style.display = 'none';
   document.getElementById('quiz-thankyou').style.display = 'block';
-  setTimeout(function() {
-    window.open('https://calendly.com/bethersagency/30min?name=' + encodeURIComponent(name), '_blank');
-  }, 1500);
 }
 </script>
 
