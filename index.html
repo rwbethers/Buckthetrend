@@ -555,7 +555,7 @@ function quizSubmit(e) {
   var phone = document.getElementById('ql-phone').value;
 
   // 1. Send to Google Sheets (GET + URL params — works with no-cors)
-  var SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyTzIdbzq2G76C3B_jSLDE-VgncJQJsFbKy04f5oakf7YaoMU0AzPDB5lvnNVFKhhzZ/exec";
+  var SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyNed0WThrG5gEcP2qzII4QOnDg_KIaoDp_PYhARgk0v695bnz30ZsQrzfbcOjmVD4jMg/exec";
   var params = new URLSearchParams({
     timestamp: new Date().toLocaleString("en-US", {timeZone:"America/Denver"}),
     name: name, business: biz, phone: phone, score: quizScore,
@@ -872,26 +872,26 @@ function quizSubmit(e) {
         <div class="form-row">
           <div class="form-field">
             <label>First Name</label>
-            <input type="text" placeholder="John" required>
+            <input id="bf-fname" type="text" placeholder="John" required>
           </div>
           <div class="form-field">
             <label>Last Name</label>
-            <input type="text" placeholder="Smith">
+            <input id="bf-lname" type="text" placeholder="Smith">
           </div>
         </div>
         <div class="form-row">
           <div class="form-field">
             <label>Email</label>
-            <input type="email" placeholder="john@company.com" required>
+            <input id="bf-email" type="email" placeholder="john@company.com" required>
           </div>
           <div class="form-field">
             <label>Phone</label>
-            <input type="tel" placeholder="(435) 000-0000" required>
+            <input id="bf-phone" type="tel" placeholder="(435) 000-0000" required>
           </div>
         </div>
         <div class="form-field">
           <label>Annual Revenue</label>
-          <select required>
+          <select id="bf-revenue" required>
             <option value="" disabled selected>Select range</option>
             <option>Under $500K</option>
             <option>$500K – $1M</option>
@@ -902,7 +902,7 @@ function quizSubmit(e) {
         </div>
         <div class="form-field">
           <label>Biggest Financial Challenge</label>
-          <select>
+          <select id="bf-challenge">
             <option value="" disabled selected>Select your biggest pain</option>
             <option>Cash flow problems</option>
             <option>Books always behind</option>
@@ -1013,6 +1013,25 @@ function quizSubmit(e) {
   // Form submit
   function handleSubmit(e) {
     e.preventDefault();
+    var fname = document.getElementById('bf-fname').value;
+    var lname = document.getElementById('bf-lname').value;
+    var email = document.getElementById('bf-email').value;
+    var phone = document.getElementById('bf-phone').value;
+    var revenue = document.getElementById('bf-revenue').value;
+    var challenge = document.getElementById('bf-challenge').value;
+
+    var SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyNed0WThrG5gEcP2qzII4QOnDg_KIaoDp_PYhARgk0v695bnz30ZsQrzfbcOjmVD4jMg/exec";
+    var params = new URLSearchParams({
+      timestamp: new Date().toLocaleString("en-US", {timeZone:"America/Denver"}),
+      name: fname + ' ' + lname,
+      business: email,
+      phone: phone,
+      score: revenue,
+      source: "Bottom Form | " + challenge
+    });
+    fetch(SHEET_WEBHOOK + "?" + params.toString(), { method: "GET", mode: "no-cors" }).catch(function(){});
+    gtag('event', 'conversion', {'send_to': 'AW-17722254862'});
+
     const btn = e.target.querySelector('.form-submit');
     btn.textContent = '✓ Spot Claimed! We will be in touch shortly.';
     btn.style.background = '#16a34a';
