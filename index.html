@@ -11,7 +11,7 @@
 </script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Buckhorn Advisory | Utah's Fractional CFO</title>
+<title>Buckhorn Advisory | Your Fractional CFO</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;900&display=swap" rel="stylesheet">
 <style>
@@ -403,7 +403,7 @@
 <!-- HERO -->
 <section class="hero" id="home">
   <div class="hero-left reveal">
-    <div class="hero-eyebrow">Utah's Fractional CFO</div>
+    <div class="hero-eyebrow">Your Fractional CFO</div>
     <h1 class="hero-headline">Stop Guessing.<br>Start <em>Growing.</em></h1>
     <p class="hero-sub">Get executive-level financial leadership — bookkeeping, cash flow, forecasting, and strategy — at a fraction of the cost of a full-time hire.</p>
     <div class="hero-actions">
@@ -555,7 +555,7 @@ function quizSubmit(e) {
   var phone = document.getElementById('ql-phone').value;
 
   // 1. Send to Google Sheets (GET + URL params — works with no-cors)
-  var SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyNed0WThrG5gEcP2qzII4QOnDg_KIaoDp_PYhARgk0v695bnz30ZsQrzfbcOjmVD4jMg/exec";
+  var SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbwZG_3ZLm_lt324oOUFF85_EGkumsZHGnhiYZBQaOermMmD51NRoEjNYyoZ9pKolCGW/exec";
   var params = new URLSearchParams({
     timestamp: new Date().toLocaleString("en-US", {timeZone:"America/Denver"}),
     name: name, business: biz, phone: phone, score: quizScore,
@@ -605,7 +605,7 @@ function quizSubmit(e) {
 
 <!-- CLIENT LOGOS -->
 <div class="trust-logos">
-  <p>Trusted by 60+ growing Utah businesses</p>
+  <p>Trusted by 60+ growing businesses nationwide</p>
   <div class="logos-grid">
     <span class="logo-pill">Western Mountain Inc.</span>
     <span class="logo-pill">Absolute Pool Care</span>
@@ -1020,13 +1020,13 @@ function quizSubmit(e) {
     var revenue = document.getElementById('bf-revenue').value;
     var challenge = document.getElementById('bf-challenge').value;
 
-    var SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbyNed0WThrG5gEcP2qzII4QOnDg_KIaoDp_PYhARgk0v695bnz30ZsQrzfbcOjmVD4jMg/exec";
+    var SHEET_WEBHOOK = "https://script.google.com/macros/s/AKfycbwZG_3ZLm_lt324oOUFF85_EGkumsZHGnhiYZBQaOermMmD51NRoEjNYyoZ9pKolCGW/exec";
     var params = new URLSearchParams({
       timestamp: new Date().toLocaleString("en-US", {timeZone:"America/Denver"}),
       name: fname + ' ' + lname,
-      business: email,
+      email: email,
       phone: phone,
-      score: revenue,
+      revenue: revenue,
       source: "Bottom Form | " + challenge
     });
     fetch(SHEET_WEBHOOK + "?" + params.toString(), { method: "GET", mode: "no-cors" }).catch(function(){});
