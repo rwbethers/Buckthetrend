@@ -1,0 +1,888 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>10 Cash Flow Mistakes Killing Your Business — Buckhorn Advisory</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Inter:wght@300;400;500;600&display=swap');
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  :root {
+    --navy: #0a1628;
+    --navy-mid: #132040;
+    --navy-light: #1e3060;
+    --gold: #c9a84c;
+    --gold-light: #e8c97a;
+    --white: #ffffff;
+    --off-white: #f8f6f1;
+    --text: #1a1a2e;
+    --text-light: #4a5568;
+    --rule: #d4c5a0;
+  }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #e8e4dc;
+    color: var(--text);
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+
+  .page {
+    width: 8.5in;
+    margin: 0 auto 0.5in;
+    background: var(--white);
+    position: relative;
+    overflow: hidden;
+  }
+
+  /* ── COVER PAGE ── */
+  .cover {
+    background: var(--navy);
+    min-height: 11in;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .cover-top {
+    padding: 0.6in 0.7in 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(201,168,76,0.25);
+    padding-bottom: 0.3in;
+  }
+
+  .logo-text {
+    font-family: 'Playfair Display', serif;
+    color: var(--white);
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .logo-sub {
+    color: var(--gold);
+    font-family: 'Inter', sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-top: 2px;
+  }
+
+  .cover-badge {
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 6px 14px;
+    border-radius: 2px;
+  }
+
+  .cover-main {
+    padding: 0.7in 0.7in 0;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .cover-eyebrow {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.3in;
+  }
+
+  .cover-number {
+    font-family: 'Playfair Display', serif;
+    font-size: 120px;
+    font-weight: 700;
+    color: rgba(201,168,76,0.12);
+    line-height: 1;
+    margin-bottom: -0.15in;
+    letter-spacing: -4px;
+  }
+
+  .cover-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 44px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 0.25in;
+    max-width: 6.5in;
+  }
+
+  .cover-title span {
+    color: var(--gold);
+  }
+
+  .cover-subtitle {
+    color: rgba(255,255,255,0.6);
+    font-size: 14px;
+    font-weight: 300;
+    line-height: 1.7;
+    max-width: 5in;
+    margin-bottom: 0.5in;
+  }
+
+  .cover-rule {
+    width: 60px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 0.35in;
+  }
+
+  .cover-stats {
+    display: flex;
+    gap: 0.5in;
+    margin-top: 0.4in;
+    padding-top: 0.4in;
+    border-top: 1px solid rgba(201,168,76,0.2);
+  }
+
+  .stat-item { }
+
+  .stat-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 32px;
+    color: var(--gold);
+    font-weight: 600;
+  }
+
+  .stat-label {
+    color: rgba(255,255,255,0.5);
+    font-size: 10px;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 4px;
+  }
+
+  .cover-footer {
+    padding: 0.3in 0.7in;
+    border-top: 1px solid rgba(201,168,76,0.15);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .cover-footer-text {
+    color: rgba(255,255,255,0.35);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+  }
+
+  .cover-footer-logo {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  /* ── INTERIOR PAGES ── */
+  .interior {
+    min-height: 11in;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .page-header {
+    background: var(--navy);
+    padding: 0.22in 0.7in;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-header-logo {
+    font-family: 'Playfair Display', serif;
+    color: var(--white);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.02em;
+  }
+
+  .page-header-title {
+    color: rgba(255,255,255,0.45);
+    font-size: 9px;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+  }
+
+  .page-content {
+    padding: 0.55in 0.7in;
+    flex: 1;
+  }
+
+  .page-footer {
+    border-top: 1px solid var(--rule);
+    padding: 0.18in 0.7in;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .page-footer-text {
+    color: var(--text-light);
+    font-size: 9px;
+    letter-spacing: 0.05em;
+  }
+
+  .page-num {
+    font-size: 9px;
+    color: var(--gold);
+    font-weight: 600;
+    letter-spacing: 0.1em;
+  }
+
+  /* ── INTRO PAGE ── */
+  .intro-eyebrow {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.2in;
+  }
+
+  .intro-heading {
+    font-family: 'Playfair Display', serif;
+    font-size: 30px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+    margin-bottom: 0.25in;
+  }
+
+  .intro-rule {
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 0.3in;
+  }
+
+  .intro-body {
+    color: var(--text-light);
+    font-size: 12px;
+    line-height: 1.9;
+    max-width: 6in;
+  }
+
+  .intro-body p {
+    margin-bottom: 0.2in;
+  }
+
+  .intro-body strong {
+    color: var(--navy);
+    font-weight: 600;
+  }
+
+  .callout-box {
+    background: var(--navy);
+    padding: 0.35in 0.4in;
+    margin: 0.4in 0;
+    border-left: 3px solid var(--gold);
+  }
+
+  .callout-box p {
+    color: rgba(255,255,255,0.85);
+    font-size: 13px;
+    line-height: 1.75;
+    font-style: italic;
+  }
+
+  .callout-box strong {
+    color: var(--gold) !important;
+  }
+
+  /* ── MISTAKE CARDS ── */
+  .mistake-section {
+    margin-bottom: 0.45in;
+  }
+
+  .mistake-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.25in;
+    margin-bottom: 0.18in;
+  }
+
+  .mistake-num {
+    font-family: 'Playfair Display', serif;
+    font-size: 48px;
+    font-weight: 700;
+    color: rgba(201,168,76,0.15);
+    line-height: 1;
+    min-width: 0.55in;
+    margin-top: -8px;
+  }
+
+  .mistake-title-block { }
+
+  .mistake-label {
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    margin-bottom: 4px;
+  }
+
+  .mistake-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--navy);
+    line-height: 1.2;
+  }
+
+  .mistake-body {
+    color: var(--text-light);
+    font-size: 11.5px;
+    line-height: 1.85;
+    padding-left: 0.8in;
+  }
+
+  .mistake-body p {
+    margin-bottom: 0.12in;
+  }
+
+  .fix-block {
+    margin-top: 0.18in;
+    padding: 0.2in 0.25in;
+    background: var(--off-white);
+    border-left: 2px solid var(--gold);
+    margin-left: 0.8in;
+  }
+
+  .fix-label {
+    color: var(--gold);
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    margin-bottom: 6px;
+  }
+
+  .fix-text {
+    color: var(--navy);
+    font-size: 11px;
+    line-height: 1.7;
+    font-weight: 500;
+  }
+
+  .divider {
+    border: none;
+    border-top: 1px solid var(--rule);
+    margin: 0.4in 0;
+  }
+
+  /* ── TWO COLUMN ── */
+  .two-col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.4in;
+  }
+
+  /* ── CTA PAGE ── */
+  .cta-page {
+    background: var(--navy);
+    min-height: 11in;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  .cta-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0.7in;
+  }
+
+  .cta-eyebrow {
+    color: var(--gold);
+    font-size: 10px;
+    font-weight: 600;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    margin-bottom: 0.25in;
+  }
+
+  .cta-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 38px;
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.2;
+    margin-bottom: 0.25in;
+    max-width: 5.5in;
+  }
+
+  .cta-title span { color: var(--gold); }
+
+  .cta-rule {
+    width: 40px;
+    height: 2px;
+    background: var(--gold);
+    margin-bottom: 0.3in;
+  }
+
+  .cta-body {
+    color: rgba(255,255,255,0.65);
+    font-size: 13px;
+    line-height: 1.8;
+    max-width: 5in;
+    margin-bottom: 0.5in;
+  }
+
+  .cta-items {
+    list-style: none;
+    margin-bottom: 0.5in;
+  }
+
+  .cta-items li {
+    color: rgba(255,255,255,0.75);
+    font-size: 12px;
+    line-height: 1.6;
+    padding: 0.1in 0;
+    border-bottom: 1px solid rgba(201,168,76,0.15);
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .cta-items li::before {
+    content: '';
+    display: block;
+    width: 6px;
+    height: 6px;
+    background: var(--gold);
+    border-radius: 50%;
+    flex-shrink: 0;
+  }
+
+  .cta-button {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    padding: 0.18in 0.4in;
+    text-decoration: none;
+    margin-bottom: 0.2in;
+  }
+
+  .cta-contact {
+    color: rgba(255,255,255,0.35);
+    font-size: 10px;
+    letter-spacing: 0.05em;
+    margin-top: 0.15in;
+  }
+
+  .cta-contact strong {
+    color: rgba(255,255,255,0.6);
+  }
+
+  .disclaimer {
+    padding: 0.3in 0.7in;
+    border-top: 1px solid rgba(201,168,76,0.15);
+  }
+
+  .disclaimer p {
+    color: rgba(255,255,255,0.25);
+    font-size: 8.5px;
+    line-height: 1.6;
+  }
+
+  @media print {
+    body { background: white; }
+    .page { margin: 0; width: 100%; page-break-after: always; }
+    .page:last-child { page-break-after: auto; }
+  }
+</style>
+</head>
+<body>
+
+<!-- ══════════════════════════════════════════
+     PAGE 1 — COVER
+══════════════════════════════════════════ -->
+<div class="page cover">
+  <div class="cover-top">
+    <div>
+      <div class="logo-text">Buckhorn Advisory</div>
+      <div class="logo-sub">Fractional CFO &amp; HR Services</div>
+    </div>
+    <div class="cover-badge">Free Executive Guide</div>
+  </div>
+
+  <div class="cover-main">
+    <div class="cover-eyebrow">Cash Flow Intelligence Series</div>
+    <div class="cover-number">10</div>
+    <div class="cover-title">Cash Flow Mistakes <span>Killing Your Business</span><br>— And How to Fix Them</div>
+    <div class="cover-rule"></div>
+    <div class="cover-subtitle">
+      Most business owners are profitable on paper — but constantly stressed about cash.
+      This guide identifies the ten most common financial blind spots we see in founder-led
+      companies and gives you a clear path to fix each one.
+    </div>
+
+    <div class="cover-stats">
+      <div class="stat-item">
+        <div class="stat-num">60+</div>
+        <div class="stat-label">Companies Served</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">98%</div>
+        <div class="stat-label">Client Satisfaction</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">60 Days</div>
+        <div class="stat-label">Avg. Time to ROI</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-num">$500K+</div>
+        <div class="stat-label">Revenue Served</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="cover-footer">
+    <div class="cover-footer-text">© 2026 Buckhorn Advisory &nbsp;|&nbsp; buckthetrend.co &nbsp;|&nbsp; Confidential — For Recipient Use Only</div>
+    <div class="cover-footer-logo">Stop Guessing. Start Growing.</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 2 — INTRODUCTION
+══════════════════════════════════════════ -->
+<div class="page interior">
+  <div class="page-header">
+    <div class="page-header-logo">Buckhorn Advisory</div>
+    <div class="page-header-title">Cash Flow Mistakes Killing Your Business</div>
+  </div>
+
+  <div class="page-content">
+    <div class="intro-eyebrow">A Note From Our Team</div>
+    <div class="intro-heading">Profit is not the same<br>as cash in your account.</div>
+    <div class="intro-rule"></div>
+    <div class="intro-body">
+      <p>We've worked with over 60 founder-led businesses — construction companies, healthcare practices, e-commerce brands, manufacturers, and professional services firms. Across every industry, we see the same pattern: <strong>the business is growing, but the owner is constantly anxious about money.</strong></p>
+      <p>The income statement looks fine. The bank account doesn't match. Payroll is coming up and the timing feels tight. You're chasing invoices instead of chasing growth. Sound familiar?</p>
+      <p>This isn't a revenue problem. It's a cash flow management problem — and it's almost always caused by one or more of the ten mistakes we've outlined in this guide.</p>
+      <p>The good news: every single one of these is fixable. You don't need to hire a full-time CFO at $200,000 a year to get this right. You need the right systems, the right oversight, and someone who's done it before.</p>
+      <p><strong>That's exactly what we built Buckhorn Advisory to do.</strong></p>
+    </div>
+
+    <div class="callout-box">
+      <p>"The average small business owner spends <strong>40% of their time on financial tasks</strong> they didn't go into business to do — and most still don't have a clear picture of where their cash is going. <strong>This guide changes that.</strong>"</p>
+    </div>
+
+    <div class="intro-body">
+      <p>Read this guide from start to finish. Then, if even two or three of these mistakes hit close to home, take us up on our free 15-minute call. No pitch. Just clarity.</p>
+    </div>
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">Buckhorn Advisory &nbsp;|&nbsp; buckthetrend.co &nbsp;|&nbsp; (435) 231-9600</div>
+    <div class="page-num">02</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 3 — MISTAKES 1–3
+══════════════════════════════════════════ -->
+<div class="page interior">
+  <div class="page-header">
+    <div class="page-header-logo">Buckhorn Advisory</div>
+    <div class="page-header-title">Mistakes 01 – 03</div>
+  </div>
+
+  <div class="page-content">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">01</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake One</div>
+          <div class="mistake-title">You're Invoicing Late — and Waiting Even Longer to Follow Up</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>Every day an invoice sits unsent is a day you're giving your client an interest-free loan. Most founders batch invoicing at the end of the month — which means work done on the 1st doesn't get paid until the 60th. Multiply that by your entire book of business and you have a structural cash delay baked into your model.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">Invoice the moment work is delivered. Set up automated payment reminders at 7, 14, and 21 days past due. Offer ACH to eliminate check delays. If you're on Net 30, negotiate Net 15 with your top accounts.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">02</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake Two</div>
+          <div class="mistake-title">You're Confusing Profit With Cash Flow</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>Your P&amp;L says you made $80,000 last month. Your bank account says $12,000. Both can be true — and this disconnect is one of the most common sources of founder stress. Profit is an accounting concept. Cash is what you can actually spend. Inventory, timing differences, loan repayments, and prepaid expenses all create gaps between the two.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">Run a cash flow statement every month — not just the P&amp;L. Your income statement tells you if you're profitable. Your cash flow statement tells you if you can survive. You need both.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">03</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake Three</div>
+          <div class="mistake-title">You Have No 13-Week Cash Flow Forecast</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>Operating without a forward-looking cash forecast is like driving at night with your headlights off. You might make it — but you won't see the problem until you're already in it. A 13-week rolling forecast shows you exactly when cash will be tight, weeks before it happens, so you can act rather than react.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">Build a simple 13-week forecast in Excel or your accounting software. Map every expected inflow and outflow week-by-week. Review it every Monday. This single habit changes how you run your business.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">Buckhorn Advisory &nbsp;|&nbsp; buckthetrend.co &nbsp;|&nbsp; (435) 231-9600</div>
+    <div class="page-num">03</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 4 — MISTAKES 4–6
+══════════════════════════════════════════ -->
+<div class="page interior">
+  <div class="page-header">
+    <div class="page-header-logo">Buckhorn Advisory</div>
+    <div class="page-header-title">Mistakes 04 – 06</div>
+  </div>
+
+  <div class="page-content">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">04</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake Four</div>
+          <div class="mistake-title">Your Payroll Timing Is Destroying Your Cash Position</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>Payroll is typically the largest fixed outflow in any business. When it's not aligned with your revenue collection cycle, it creates predictable cash crunches — often at the worst possible time. Many founders don't realize their payroll dates are working against them until cash gets tight two months in a row at the same point in the cycle.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">Map your payroll dates against your average receivables collection window. If there's a consistent gap, either adjust payroll timing, accelerate collections, or establish a line of credit as a bridge — before you need it.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">05</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake Five</div>
+          <div class="mistake-title">You Applied for Credit When You Already Needed It</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>Banks lend to businesses that don't need money. The moment your financials show stress — declining revenue, tight cash, missed payments — your borrowing options shrink and your rates go up. Most founders wait until they're desperate, which is exactly the wrong time to call their banker.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">Establish a business line of credit when your financials are clean and strong. Draw nothing. Pay it back immediately if you use it. Having access to capital when you don't need it is one of the best financial decisions a business owner can make.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">06</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake Six</div>
+          <div class="mistake-title">You Don't Know Your Cash Conversion Cycle</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>Your Cash Conversion Cycle (CCC) measures how long it takes to turn a dollar spent on operations into a dollar collected from a customer. A long CCC means your money is tied up in the business — in inventory, work-in-progress, or unpaid invoices. Most owners have never calculated theirs.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">Calculate: Days Sales Outstanding + Days Inventory Outstanding – Days Payable Outstanding. Shorten it by collecting faster, turning inventory quicker, and extending vendor payment terms. Every day you shorten your CCC frees up real cash.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">Buckhorn Advisory &nbsp;|&nbsp; buckthetrend.co &nbsp;|&nbsp; (435) 231-9600</div>
+    <div class="page-num">04</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 5 — MISTAKES 7–10
+══════════════════════════════════════════ -->
+<div class="page interior">
+  <div class="page-header">
+    <div class="page-header-logo">Buckhorn Advisory</div>
+    <div class="page-header-title">Mistakes 07 – 10</div>
+  </div>
+
+  <div class="page-content">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">07</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake Seven</div>
+          <div class="mistake-title">Tax Surprises Are Draining Your Operating Cash</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>A $60,000 tax bill in April is devastating if you haven't been setting money aside. Many founders don't have accurate quarterly tax projections — so they either pay penalties for underpayment or scramble to find cash that should have been reserved months ago. Either way, it's avoidable.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">Work with your CPA to project quarterly tax obligations and set aside cash in a dedicated tax reserve account monthly — not quarterly. Treat it like a bill, not an afterthought. No surprises in April.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">08</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake Eight</div>
+          <div class="mistake-title">You're Overpaying on Vendor Terms You Never Renegotiated</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>The terms you signed when you were a small client are rarely the best terms you can get once you've grown. Vendors want to keep your business. Most founders never go back to renegotiate — they just keep paying Net 15 on a $400,000 annual account that could easily support Net 45 or Net 60.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">Audit your top 10 vendor relationships annually. Request extended payment terms from your largest suppliers. Even moving Net 15 to Net 30 across $500K in payables creates meaningful cash flow breathing room.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">09</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake Nine</div>
+          <div class="mistake-title">Your HR Costs Are Unmanaged and Growing Quietly</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>Benefits, workers' comp, overtime, turnover costs, and compliance penalties rarely show up as a single line item — they're scattered across payroll, insurance, and legal fees. Without a dedicated HR function reviewing these, they compound quietly for years. One wrongful termination claim or benefits compliance error can cost more than a year of HR oversight.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">Get a fractional HR team to audit your people costs, ensure compliance, and optimize your benefits structure. The cost of prevention is a fraction of the cost of a single HR incident.</div>
+      </div>
+    </div>
+
+    <hr class="divider">
+
+    <div class="mistake-section">
+      <div class="mistake-header">
+        <div class="mistake-num">10</div>
+        <div class="mistake-title-block">
+          <div class="mistake-label">Mistake Ten</div>
+          <div class="mistake-title">You're Running Without a CFO — and It's Costing You More Than You Think</div>
+        </div>
+      </div>
+      <div class="mistake-body">
+        <p>A full-time CFO costs $150,000–$250,000 per year. Most growing businesses can't justify that. So they run without one — which means no financial strategy, no KPI accountability, no bank relationship management, no M&amp;A readiness, and no one watching the numbers who isn't also running operations. Every mistake in this guide is what happens when there's no CFO in the room.</p>
+      </div>
+      <div class="fix-block">
+        <div class="fix-label">The Fix</div>
+        <div class="fix-text">A fractional CFO gives you Fortune 500-level financial leadership at a fraction of the cost. Strategy, forecasting, banking relationships, and KPI dashboards — without the full-time salary. This is exactly what Buckhorn Advisory delivers.</div>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="page-footer">
+    <div class="page-footer-text">Buckhorn Advisory &nbsp;|&nbsp; buckthetrend.co &nbsp;|&nbsp; (435) 231-9600</div>
+    <div class="page-num">05</div>
+  </div>
+</div>
+
+
+<!-- ══════════════════════════════════════════
+     PAGE 6 — CTA / BACK COVER
+══════════════════════════════════════════ -->
+<div class="page cta-page">
+  <div class="page-header" style="background: rgba(255,255,255,0.05); border-bottom: 1px solid rgba(201,168,76,0.15);">
+    <div class="page-header-logo" style="color: white;">Buckhorn Advisory</div>
+    <div class="page-header-title">Next Steps</div>
+  </div>
+
+  <div class="cta-content">
+    <div class="cta-eyebrow">Ready to Fix This?</div>
+    <div class="cta-title">See What a Fractional CFO <span>&amp; HR Team</span> Can Do for Your Business</div>
+    <div class="cta-rule"></div>
+    <div class="cta-body">
+      We work with founder-led businesses doing $500K to $100M in revenue. In 15 minutes, we'll show you exactly where your cash is leaking and what we'd do about it. No pitch. No pressure. Just clarity.
+    </div>
+
+    <ul class="cta-items">
+      <li>A complete review of your current cash flow position</li>
+      <li>Identification of your top 2–3 financial blind spots</li>
+      <li>A clear picture of what fractional CFO + HR support looks like for your business</li>
+      <li>No obligation — ever</li>
+    </ul>
+
+    <div class="cta-button">Book Your Free 15-Minute Call</div>
+    <div class="cta-contact">
+      <strong>Ryan Bethers</strong> &nbsp;|&nbsp; (435) 231-9600 &nbsp;|&nbsp; buckthetrend.co
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <p>This guide is intended for general informational purposes only and does not constitute financial, legal, or accounting advice. Results vary by business. Buckhorn Advisory recommends working with a qualified professional before making financial decisions. © 2026 Buckhorn Advisory. All rights reserved.</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,620 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google Ads Tag -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-17722254862"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-17722254862');
+  gtag('event', 'conversion', {'send_to': 'AW-17722254862'});
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Free Guide: 10 Cash Flow Mistakes Killing Your Business | Buckhorn Advisory</title>
+<meta name="description" content="Download the free guide revealing the 10 cash flow mistakes quietly draining your business — and the exact fixes for each one.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --navy: #0a1628;
+    --navy-mid: #132040;
+    --gold: #c9a84c;
+    --gold-light: #e8cc80;
+    --gold-dim: rgba(201,168,76,0.15);
+    --gold-border: rgba(201,168,76,0.35);
+    --white: #ffffff;
+    --text-muted: rgba(255,255,255,0.65);
+    --red: #dc2626;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: 'Inter', sans-serif;
+    background: var(--navy);
+    color: var(--white);
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+
+  /* ── NAV ── */
+  nav {
+    position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
+    background: rgba(10,22,40,0.95);
+    backdrop-filter: blur(12px);
+    padding: 0 40px;
+    height: 64px;
+    display: flex; align-items: center; justify-content: space-between;
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .nav-logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px; font-weight: 700;
+    color: var(--white); text-decoration: none;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .nav-logo .dot { color: var(--gold); }
+  .nav-back {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 500;
+    display: flex; align-items: center; gap: 6px;
+    transition: color 0.2s;
+  }
+  .nav-back:hover { color: var(--gold); }
+
+  /* ── HERO ── */
+  .hero {
+    padding: 120px 40px 80px;
+    display: grid;
+    grid-template-columns: 1fr 440px;
+    gap: 80px;
+    align-items: center;
+    max-width: 1100px;
+    margin: 0 auto;
+    min-height: 100vh;
+  }
+
+  .hero-eyebrow {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    color: var(--gold);
+    padding: 6px 14px; border-radius: 100px;
+    font-size: 11px; font-weight: 700; letter-spacing: 1.8px; text-transform: uppercase;
+    margin-bottom: 28px;
+  }
+  .eyebrow-dot { width: 6px; height: 6px; background: var(--gold); border-radius: 50%; }
+
+  .hero-headline {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 4vw, 52px);
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 20px;
+  }
+  .hero-headline em { font-style: normal; color: var(--gold); }
+
+  .hero-sub {
+    font-size: 17px;
+    color: var(--text-muted);
+    line-height: 1.75;
+    max-width: 500px;
+    margin-bottom: 36px;
+  }
+
+  .what-youll-get {
+    margin-bottom: 40px;
+  }
+  .what-youll-get h3 {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 16px;
+  }
+  .check-list { list-style: none; display: flex; flex-direction: column; gap: 10px; }
+  .check-list li {
+    display: flex; align-items: flex-start; gap: 12px;
+    font-size: 15px; color: rgba(255,255,255,0.85); line-height: 1.5;
+  }
+  .check-list li::before {
+    content: '';
+    flex-shrink: 0;
+    width: 18px; height: 18px;
+    border-radius: 50%;
+    background: var(--gold-dim);
+    border: 1px solid var(--gold-border);
+    background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 4L3.5 6.5L9 1' stroke='%23c9a84c' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-top: 2px;
+  }
+
+  .social-proof {
+    display: flex; align-items: center; gap: 12px;
+    padding-top: 32px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+  }
+  .proof-avatars {
+    display: flex;
+  }
+  .proof-avatar {
+    width: 32px; height: 32px; border-radius: 50%;
+    border: 2px solid var(--navy);
+    margin-right: -8px;
+    background: var(--gold-dim);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px; font-weight: 700; color: var(--gold);
+  }
+  .proof-text { font-size: 13px; color: var(--text-muted); line-height: 1.5; margin-left: 8px; }
+  .proof-text strong { color: var(--white); }
+
+  /* ── FORM CARD ── */
+  .form-card {
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.1);
+    border-radius: 20px;
+    overflow: hidden;
+  }
+
+  /* Book cover embedded at top of form card */
+  .book-preview {
+    background: var(--navy-mid);
+    padding: 28px;
+    display: flex;
+    justify-content: center;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+  }
+
+  .mini-book {
+    width: 180px;
+    height: 240px;
+    background: #0a1628;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 6px 10px 32px rgba(0,0,0,0.6), 2px 2px 0 rgba(255,255,255,0.04) inset;
+    border-radius: 2px;
+  }
+  .mini-book::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: 0.06;
+    background-image:
+      radial-gradient(ellipse 150px 100px at 60% 40%, transparent 40%, rgba(255,255,255,0.8) 41%, transparent 42%),
+      radial-gradient(ellipse 130px 85px at 60% 40%, transparent 48%, rgba(255,255,255,0.8) 49%, transparent 50%),
+      radial-gradient(ellipse 110px 70px at 60% 40%, transparent 56%, rgba(255,255,255,0.8) 57%, transparent 58%),
+      radial-gradient(ellipse 90px 55px at 60% 40%, transparent 64%, rgba(255,255,255,0.8) 65%, transparent 66%),
+      radial-gradient(ellipse 170px 120px at 30% 70%, transparent 35%, rgba(255,255,255,0.5) 36%, transparent 37%),
+      radial-gradient(ellipse 145px 100px at 30% 70%, transparent 44%, rgba(255,255,255,0.5) 45%, transparent 46%);
+    pointer-events: none;
+  }
+  .mini-book-inner {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 14px 16px;
+  }
+  .mini-book-top {}
+  .mini-rule { width: 100%; height: 1px; background: rgba(201,168,76,0.5); margin-bottom: 8px; }
+  .mini-eyebrow {
+    font-family: 'Playfair Display', serif;
+    color: #c9a84c;
+    font-size: 6.5px;
+    font-weight: 400;
+    letter-spacing: 0.03em;
+    line-height: 1.4;
+    text-align: center;
+    font-style: italic;
+    margin-bottom: 8px;
+  }
+  .mini-rule-bottom { width: 100%; height: 1px; background: rgba(201,168,76,0.5); }
+  .mini-book-title-block {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 0;
+  }
+  .mini-book-title {
+    font-family: 'Inter', sans-serif;
+    font-size: 30px;
+    font-weight: 900;
+    color: #ffffff;
+    line-height: 0.95;
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: -0.5px;
+  }
+  .mini-book-title .gold { color: #c9a84c; display: block; }
+  .mini-book-bottom {}
+  .mini-divider { width: 100%; height: 1px; background: rgba(201,168,76,0.4); margin-bottom: 8px; }
+  .mini-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .mini-brand {
+    font-family: 'Playfair Display', serif;
+    color: rgba(255,255,255,0.7);
+    font-size: 5.5px;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+  }
+  .mini-tag {
+    color: #c9a84c;
+    font-size: 4px;
+    font-weight: 700;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    border: 0.5px solid rgba(201,168,76,0.5);
+    padding: 2px 4px;
+  }
+
+  /* Form body */
+  .form-body {
+    padding: 28px 32px 32px;
+  }
+  .form-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 6px;
+    line-height: 1.3;
+  }
+  .form-subtitle {
+    font-size: 13px;
+    color: var(--text-muted);
+    margin-bottom: 24px;
+    line-height: 1.5;
+  }
+
+  .form-group { margin-bottom: 16px; }
+  .form-label {
+    display: block;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 1.2px;
+    text-transform: uppercase;
+    color: rgba(255,255,255,0.5);
+    margin-bottom: 8px;
+  }
+  .form-input {
+    width: 100%;
+    background: rgba(255,255,255,0.05);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    padding: 14px 16px;
+    color: var(--white);
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    transition: border-color 0.2s, background 0.2s;
+    outline: none;
+    -webkit-appearance: none;
+  }
+  .form-input::placeholder { color: rgba(255,255,255,0.25); }
+  .form-input:focus {
+    border-color: var(--gold);
+    background: rgba(201,168,76,0.06);
+  }
+
+  .submit-btn {
+    width: 100%;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 16px 24px;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 15px;
+    font-weight: 800;
+    letter-spacing: 0.3px;
+    border: none;
+    cursor: pointer;
+    margin-top: 8px;
+    transition: all 0.25s;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+  }
+  .submit-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px rgba(201,168,76,0.45);
+  }
+  .submit-btn:active { transform: translateY(0); }
+
+  .form-disclaimer {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255,255,255,0.3);
+    margin-top: 14px;
+    line-height: 1.6;
+  }
+
+  /* ── SUCCESS STATE ── */
+  .success-state {
+    display: none;
+    padding: 40px 32px;
+    text-align: center;
+  }
+  .success-icon {
+    width: 56px; height: 56px;
+    background: rgba(201,168,76,0.15);
+    border: 1px solid var(--gold-border);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+  }
+  .success-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--white);
+    margin-bottom: 10px;
+  }
+  .success-text {
+    font-size: 14px;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+  }
+  .download-btn {
+    display: inline-block;
+    background: var(--gold);
+    color: var(--navy);
+    padding: 15px 32px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 800;
+    text-decoration: none;
+    transition: all 0.25s;
+    box-shadow: 0 4px 20px rgba(201,168,76,0.35);
+  }
+  .download-btn:hover {
+    background: var(--gold-light);
+    transform: translateY(-1px);
+    box-shadow: 0 8px 28px rgba(201,168,76,0.45);
+  }
+
+  /* ── URGENCY STRIP ── */
+  .urgency-strip {
+    background: rgba(220,38,38,0.12);
+    border: 1px solid rgba(220,38,38,0.25);
+    border-radius: 8px;
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 32px;
+  }
+  .urgency-dot { width: 8px; height: 8px; background: #dc2626; border-radius: 50%; flex-shrink: 0; animation: pulse 1.5s infinite; }
+  @keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.4; }
+  }
+  .urgency-text { font-size: 13px; color: rgba(255,255,255,0.8); line-height: 1.4; }
+  .urgency-text strong { color: var(--white); }
+
+  /* ── FOOTER ── */
+  footer {
+    text-align: center;
+    padding: 40px 20px;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    color: rgba(255,255,255,0.3);
+    font-size: 12px;
+    line-height: 1.6;
+  }
+  footer a { color: rgba(255,255,255,0.4); text-decoration: none; }
+  footer a:hover { color: var(--gold); }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 860px) {
+    nav { padding: 0 20px; }
+    .hero {
+      grid-template-columns: 1fr;
+      padding: 100px 20px 60px;
+      gap: 48px;
+      min-height: auto;
+    }
+    .hero-headline { font-size: 34px; }
+    .form-card { max-width: 480px; margin: 0 auto; }
+    .form-body { padding: 24px 24px 28px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <a href="/" class="nav-logo">Buckhorn<span class="dot">.</span></a>
+  <a href="/" class="nav-back">&#8592; Back to site</a>
+</nav>
+
+<!-- MAIN -->
+<div class="hero">
+
+  <!-- LEFT: Copy -->
+  <div class="hero-left">
+    <div class="hero-eyebrow">
+      <span class="eyebrow-dot"></span>
+      Free Resource — No Credit Card Required
+    </div>
+
+    <h1 class="hero-headline">
+      10 Cash Flow Mistakes<br>
+      <em>Quietly Killing</em><br>
+      Your Business
+    </h1>
+
+    <p class="hero-sub">
+      Most profitable businesses are still stressed about cash. If that sounds familiar, one of these 10 mistakes is why — and we'll show you exactly how to fix each one.
+    </p>
+
+    <div class="urgency-strip">
+      <div class="urgency-dot"></div>
+      <div class="urgency-text"><strong>Mistake #7</strong> is the one most business owners never catch — and it's silently draining cash every single month.</div>
+    </div>
+
+    <div class="what-youll-get">
+      <h3>What's inside the free guide</h3>
+      <ul class="check-list">
+        <li>The 10 most common cash flow killers in $500K–$100M businesses</li>
+        <li>The exact fix for each mistake — not theory, real action steps</li>
+        <li>Why most owners are profitable on paper but struggling in reality</li>
+        <li>What a 13-week cash forecast is and why you need one immediately</li>
+        <li>The CFO move that changes everything — even if you can't afford one full-time</li>
+      </ul>
+    </div>
+
+    <div class="social-proof">
+      <div class="proof-avatars">
+        <div class="proof-avatar">JM</div>
+        <div class="proof-avatar">RC</div>
+        <div class="proof-avatar">TH</div>
+      </div>
+      <div class="proof-text"><strong>Business owners in construction, healthcare,</strong><br>manufacturing, and professional services.</div>
+    </div>
+  </div>
+
+  <!-- RIGHT: Form -->
+  <div class="hero-right">
+    <div class="form-card">
+
+      <!-- Mini book cover -->
+      <div class="book-preview">
+        <div class="mini-book">
+          <div class="mini-book-inner">
+            <div class="mini-book-top">
+              <div class="mini-rule"></div>
+              <div class="mini-eyebrow">10 Cash Flow Mistakes<br>Killing Your Business:</div>
+              <div class="mini-rule-bottom"></div>
+            </div>
+            <div class="mini-book-title-block">
+              <div class="mini-book-title">
+                And&nbsp;How<br>
+                To&nbsp;<span class="gold">Fix</span>
+                Every<br>One
+              </div>
+            </div>
+            <div class="mini-book-bottom">
+              <div class="mini-divider"></div>
+              <div class="mini-footer">
+                <div class="mini-brand">Buckhorn Advisory</div>
+                <div class="mini-tag">Free Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Form or Success -->
+      <div class="form-body" id="formSection">
+        <div class="form-title">Get Your Free Copy</div>
+        <div class="form-subtitle">Instant access — takes 10 seconds to unlock.</div>
+
+        <form id="leadForm" onsubmit="handleSubmit(event)">
+
+          <div class="form-group">
+            <label class="form-label" for="firstName">First Name</label>
+            <input class="form-input" type="text" id="firstName" name="firstName" placeholder="John" required autocomplete="given-name">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="email">Email Address</label>
+            <input class="form-input" type="email" id="email" name="email" placeholder="john@yourcompany.com" required autocomplete="email">
+          </div>
+
+          <div class="form-group">
+            <label class="form-label" for="phone">Phone Number</label>
+            <input class="form-input" type="tel" id="phone" name="phone" placeholder="(555) 000-0000" required autocomplete="tel">
+          </div>
+
+          <button type="submit" class="submit-btn" id="submitBtn">
+            Send Me the Free Guide &rarr;
+          </button>
+        </form>
+
+        <div class="form-disclaimer">
+          100% free. No spam. Unsubscribe any time.<br>
+          Your information is never sold or shared.
+        </div>
+      </div>
+
+      <!-- Success state -->
+      <div class="success-state" id="successSection">
+        <div class="success-icon">&#10003;</div>
+        <div class="success-title">You're all set.</div>
+        <div class="success-text">
+          Your free guide is ready to download.<br>
+          Check your inbox — we're sending a copy there too.
+        </div>
+        <a href="buckhorn_cashflow_guide.html" target="_blank" class="download-btn">
+          Download the Free Guide &rarr;
+        </a>
+      </div>
+
+    </div>
+  </div>
+
+</div>
+
+<!-- FOOTER -->
+<footer>
+  &copy; 2026 Buckhorn Advisory &mdash; Fractional CFO Services<br>
+  <a href="/privacy-policy.html">Privacy Policy</a>
+</footer>
+
+<script>
+  const FORM_URL = 'https://docs.google.com/forms/d/e/1FAIpQLSdpk7KeZofsG4Mao5gtbFebbmsA9vBYnb-DzFy5QWG0xqNCzA/formResponse';
+
+  async function handleSubmit(e) {
+    e.preventDefault();
+
+    const btn = document.getElementById('submitBtn');
+    btn.textContent = 'Sending...';
+    btn.disabled = true;
+
+    const firstName = document.getElementById('firstName').value.trim();
+    const email     = document.getElementById('email').value.trim();
+    const phone     = document.getElementById('phone').value.trim();
+
+    const body = new URLSearchParams({
+      'entry.513983749':  firstName,
+      'entry.2011237905': email,
+      'entry.585919635':  phone,
+    });
+
+    // Fire-and-forget — Google Forms always returns CORS error on response,
+    // but the submission still lands in Sheets.
+    try {
+      await fetch(FORM_URL, {
+        method: 'POST',
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString(),
+      });
+    } catch (_) {}
+
+    // Show success regardless — submission went through
+    document.getElementById('formSection').style.display = 'none';
+    document.getElementById('successSection').style.display = 'block';
+
+    // Auto-open guide after 1.2s
+    setTimeout(() => {
+      window.open('buckhorn_cashflow_guide.html', '_blank');
+    }, 1200);
+  }
+</script>
+
+</body>
+</html>
